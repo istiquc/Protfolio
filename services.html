@@ -1,0 +1,186 @@
+{% block  %}{% endblock  %}
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!--google-font-->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Cookie&family=EB+Garamond:wght@400;500;600&family=Roboto:wght@100;300;400&family=Rubik:wght@300;400;500&display=swap">
+  <!--font-awesome-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+  <!--jquery-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+    integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+  <title>istiqucjamananan</title>
+</head>
+
+<body>
+  <!--scroll-btn-start-->
+  <div class="scroll-up-btn">
+    <i class="fas fa-angle-up"></i>
+  </div>
+  <!--scroll-btn-end-->
+  <!--menu-section-start-->
+  <section class="home" id="home">
+    <nav class="navbar navbar-expand-md navbar-light">
+      <div class="container">
+        <a class="navbar-brand" href="/home">An<span>aN</span></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li><a href="/home">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="/skills">Skills</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+          <div class="search-box">
+            <button class="btn-search"><i class="fas fa-search"></i></button>
+            <input type="text" class="input-search" placeholder="Type to Search...">
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="banner">
+      <div class="container">
+        <div class="home-content">
+          <h5>Hello my name is</h5>
+          <h2>Istiquc Jaman Anan</h2>
+          <h4>I'am a <span class="typing">Freelancer</span></h4>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--menu-section-end-->
+
+  <!--about-section-end-->
+  <!--services-section-end-->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="row">
+        <h4 class="title">Services</h4>
+      </div>
+      <div class="row">
+
+
+        {% for serv in servs %}
+        <div class="col">
+          <div class="services-info">
+            <div class="icon">
+              <span><i class="fas fa-laptop-code"></i></span>
+            </div>
+            <div class="services-text">
+              <h4>{{serv.name}}</h4>
+              <p>{{serv.desc}}</p>
+            </div>
+          </div>
+        </div>
+        {% endfor%}
+
+
+
+      </div>
+    </div>
+  </section>
+  <!--services-section-end-->
+  
+  <!--footer-start-->
+  <section class="footer" id="footer">
+    <div class="footer-top py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="footer-widget">
+              <p>Stay connected with me for my next update and new information.</p>
+              <div class="about-social">
+                <ul class="d-flex">
+                  <li><span>Follow Me</span></li>
+                  <li><a href="https://web.facebook.com/istiqucjamananan"><i class="fab fa-facebook"></i></a></li>
+                  <li><a href="https://twitter.com/istiquc"><i class="fab fa-twitter"></i></a></li>
+                  <li><a href="https://www.instagram.com/istiquc/"><i class="fab fa-instagram"></i></a></li>
+                  <li><a href="https://www.linkedin.com/in/istiquc-jaman-anan-b977b41bb/"><i
+                        class="fab fa-linkedin"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="footer-widget">
+              <h3>Quick Link</h3>
+              <ul>
+                <li><a href="/about">About</a></li>
+                <li><a href="/services">Services</a></li>
+                <li><a href="/contact">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="footer-widget">
+              <h3>Contact Me</h3>
+              <div class="footer-contact-items">
+                <span><i class="fas fa-map-marker-alt"></i></span>
+                <a href="https://www.google.com/maps/place/Rohanpur/@24.8214637,88.3157443,15z/data=!4m5!3m4!
+               1s0x39fba61fd0080609:0x7a711e0176345a59!8m2!3d24.8192293!4d88.3251456">Rohanpur, Chapai Nawabganj,
+                  Rajshahi</a>
+              </div>
+              <div class="footer-contact-items">
+                <span> <i class="fas fa-envelope"></i></span>
+                <a href="mailto:istiqucjamananan75@gmail.com">istiqucjamananan75@gmail.com</a>
+              </div>
+              <div class="footer-contact-items">
+                <i class="fas fa-phone-alt"></i>
+                <span>
+                  <a href="tel:+8801719185231">+8801718195231</a>
+                </span>
+                <span>
+                  <a href="tel:+8801903022164' %}">+8801903022164</a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="footer-end">
+              <p>Made By<a href="#"> @Istiquc Jaman Anan </a> </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+  <!--footer-end-->
+
+
+
+
+  <!-- Optional JavaScript -->
+  <!-- Popper.js first, then Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+    integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+    crossorigin="anonymous"></script>
+  <script src="{% static './js/progress bar.js' %}"></script>
+  <script src="{% static './js/main.js' %}"></script>
+</body>
+
+</html>
